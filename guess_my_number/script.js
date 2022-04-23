@@ -31,6 +31,7 @@ document.querySelector('.check').addEventListener('click', function() {
 
         document.querySelector('.message').textContent = '🤬 No number ';
 
+    // when secret Number is greater than guess 
     } else if(guess < secretNumber) {
         if(score <= 0) {score = 0} else {score--;}
         let currentScore = score;
@@ -46,6 +47,7 @@ document.querySelector('.check').addEventListener('click', function() {
             document.querySelector('.score').textContent = score;
         }
 
+    // when secret Number is less than guess
     } else if(guess > secretNumber) {
         if(score <= 0) {score = 0} else {score-- ;} 
         let currentScore = score;
@@ -61,6 +63,7 @@ document.querySelector('.check').addEventListener('click', function() {
             document.querySelector('.score').textContent = score;
         }
 
+    //  when secret Number is equal to guess( or when someone won the game )
     } else if (guess === secretNumber) {
         // highscore = score;
         if(highscore < score) { highscore = score; }
